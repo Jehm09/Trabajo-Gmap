@@ -1,4 +1,5 @@
 # Trabajo-Gmap
-Second Work \n
-Joe Hernandez\n
+Second Work.
+
+Joe Hernandez,
 Christian Alberto Tamayo.
