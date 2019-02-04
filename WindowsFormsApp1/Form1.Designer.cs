@@ -31,6 +31,7 @@ namespace WindowsFormsApp1 {
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gMap
@@ -78,11 +79,13 @@ namespace WindowsFormsApp1 {
             // 
             // columnHeader1
             // 
+            this.columnHeader1.DisplayIndex = 1;
             this.columnHeader1.Text = "Fecha";
             this.columnHeader1.Width = 106;
             // 
             // columnHeader2
             // 
+            this.columnHeader2.DisplayIndex = 0;
             this.columnHeader2.Text = "Lugar";
             this.columnHeader2.Width = 112;
             // 
@@ -96,12 +99,23 @@ namespace WindowsFormsApp1 {
             this.columnHeader4.Text = "Placa";
             this.columnHeader4.Width = 83;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(622, 417);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(109, 50);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(867, 495);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.gMap);
             this.MaximizeBox = false;
@@ -121,6 +135,7 @@ namespace WindowsFormsApp1 {
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button button1;
     }
 }
 

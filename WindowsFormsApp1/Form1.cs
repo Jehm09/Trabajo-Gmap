@@ -49,8 +49,8 @@ namespace WindowsFormsApp1 {
 
         public void addElementList(List<Accident> lista) {
             foreach (var l in lista) {
-                ListViewItem list = new ListViewItem(l.Date);
-                list.SubItems.Add(l.Place);
+                ListViewItem list = new ListViewItem(l.Place);
+                list.SubItems.Add(l.Date);
                 list.SubItems.Add(l.Vehiculo);
                 list.SubItems.Add(l.Placa);
 
@@ -77,7 +77,7 @@ namespace WindowsFormsApp1 {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            /**string address = listView1.SelectedItems[0].Text;
+            string address = listView1.SelectedItems[0].Text;
 
             var locations = geocoder.Geocode(address);
 
@@ -85,11 +85,21 @@ namespace WindowsFormsApp1 {
             double lgn = locations.First().LatLng.Longitude;
 
             gMap.Position = new GMap.NET.PointLatLng(lat, lgn);
-            */
+            gMap.Zoom = 12;
+            
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) {
+            if (listView1.SelectedIndices.Count <= 0) {
+                return;
+            }
+            int intselectedindex = listView1.SelectedIndices[0];
+            if (intselectedindex >= 0) {
+                String text = listView1.Items[intselectedindex].Text;
 
+                //do something
+                //MessageBox.Show(listView1.Items[intselectedindex].Text); 
+            }
         }
     }
 }
