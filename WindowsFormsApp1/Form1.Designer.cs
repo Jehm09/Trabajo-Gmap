@@ -80,13 +80,13 @@ namespace WindowsFormsApp1 {
             // columnHeader1
             // 
             this.columnHeader1.DisplayIndex = 1;
-            this.columnHeader1.Text = "Fecha";
+            this.columnHeader1.Text = "Lugar";
             this.columnHeader1.Width = 106;
             // 
             // columnHeader2
             // 
             this.columnHeader2.DisplayIndex = 0;
-            this.columnHeader2.Text = "Lugar";
+            this.columnHeader2.Text = "Fecha";
             this.columnHeader2.Width = 112;
             // 
             // columnHeader3

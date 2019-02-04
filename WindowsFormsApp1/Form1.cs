@@ -101,5 +101,9 @@ namespace WindowsFormsApp1 {
                 //MessageBox.Show(listView1.Items[intselectedindex].Text); 
             }
         }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e) {
+
+        }
     }
 }
