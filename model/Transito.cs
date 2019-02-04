@@ -9,7 +9,7 @@ namespace model {
     public class Transito {
         //Atributos
         private List<Accident> accidents;
-        public const string path = "/Data/Data_Transito.csv";
+        public const string path = "Data_Transito.csv";
 
         //Constructor
         public Transito() {
@@ -25,10 +25,16 @@ namespace model {
 
                 StreamReader objReader = new StreamReader(path);
                 string sLine = "";
+                objReader.ReadLine();
 
-                while (sLine != null) {
+                while (sLine != null ) {
                     sLine = objReader.ReadLine();
-                    Console.WriteLine(sLine);
+                    string[] sArr = sLine.Split(',');
+                    
+                    if(sLine.Length > 21) {
+                        Accident temp = new Accident(sArr[4], sArr[5]+", Colombia", sArr[6], sArr[7]);
+                        accidents.Add(temp);
+                    }
                 }
                 objReader.Close();
             }
